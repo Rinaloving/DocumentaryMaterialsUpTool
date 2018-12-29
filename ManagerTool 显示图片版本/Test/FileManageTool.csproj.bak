@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10F654A1-A45E-4948-9E2E-7CCA7CC06277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.Utils.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraEditors.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraLayout.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraNavBar.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraPivotGrid.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraReports.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.2.Service, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraReports.v14.2.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.2.Core, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraScheduler.v14.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.2.Extensions, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraScheduler.v14.2.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.2.Reporting.Extensions, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraScheduler.v14.2.Reporting.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraSpreadsheet.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 14.2\Components\Bin\Framework\DevExpress.XtraVerticalGrid.v14.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>E:\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartMap.DataClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\SmartMap.DataClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DZFC\CFKHandler.cs" />
+    <Compile Include="BLL\DZFC\filesinHandler.cs" />
+    <Compile Include="BLL\DZFC\zbuildHandler.cs" />
+    <Compile Include="BLL\DZFC\zextrabHandler.cs" />
+    <Compile Include="BLL\DZFC\zlandHandler.cs" />
+    <Compile Include="BLL\DZFC\zownerHandler.cs" />
+    <Compile Include="BLL\DZFC\zpersonHandler.cs" />
+    <Compile Include="BLL\DZFC\zroomHandler.cs" />
+    <Compile Include="BLL\DZFC\zunitHandler.cs" />
+    <Compile Include="BLL\DZFC\ZXFCHandler.cs" />
+    <Compile Include="BLL\DZFC\z产权抵押表Handler.cs" />
+    <Compile Include="BLL\EstateHJ\EstateHJHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\CFDJHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\CHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\DicHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\DYAQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\DYIQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\FDCQ1Handler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\FDCQ2Handler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\FDCQ3Handler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\FDCQXMHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\FZHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\GDHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\GJZWSYQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\HHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\HYSYQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\JSYDSYQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\LJZHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\LQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\NYDSYQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\QLRHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\QTXGQLHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SFHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SHHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SJHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SLSQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SQRHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\SZHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\TDSYQHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\YGDJHandler.cs" />
+    <Compile Include="BLL\EstateHJ\MDB\YYDJHandler.cs" />
+    <Compile Include="BLL\Estate\APPROVALFORMHandler.cs" />
+    <Compile Include="BLL\Estate\BOUNDARYMARKHandler.cs" />
+    <Compile Include="BLL\Estate\BOUNDARYSIGNHandler.cs" />
+    <Compile Include="BLL\Estate\BUSDICTCODEHandler.cs" />
+    <Compile Include="BLL\Estate\CERTIFICATEHandler.cs" />
+    <Compile Include="BLL\Estate\LANDBLOCKHandler.cs" />
+    <Compile Include="BLL\Estate\LANDOWNERINFOHandler.cs" />
+    <Compile Include="BLL\Estate\LANDSURVERYHandler.cs" />
+    <Compile Include="BLL\Estate\LANDUSEINFOHandler.cs" />
+    <Compile Include="BLL\Estate\OWNANDCASEHandler.cs" />
+    <Compile Include="BLL\Estate\OWNANDLANDSURHandler.cs" />
+    <Compile Include="BLL\Estate\OWNERSHandler.cs" />
+    <Compile Include="BLL\Estate\REALESTATEBOOKHandler.cs" />
+    <Compile Include="BLL\Estate\REALESTATECARDHandler.cs" />
+    <Compile Include="BLL\Estate\REALESTATERIGHTHandler.cs" />
+    <Compile Include="BLL\Estate\REALESTATEUNITHandler.cs" />
+    <Compile Include="BLL\Estate\RECANDAPPFORMHandler.cs" />
+    <Compile Include="BLL\Estate\REGBOOKLISTHandler.cs" />
+    <Compile Include="BLL\Estate\REUANDCASEHandler.cs" />
+    <Compile Include="BLL\Estate\SURAPPROVALHandler.cs" />
+    <Compile Include="BLL\IMGConvertHandler.cs" />
+    <Compile Include="BLL\SuoYQConvertHandler.cs" />
+    <Compile Include="BLL\SuoYQ\TOESTATELOGHandler.cs" />
+    <Compile Include="BLL\SYQ\SYQConvertHandler.cs" />
+    <Compile Include="CommonClass\PublicUtility.cs" />
+    <Compile Include="CommonClass\SystemHandler.cs" />
+    <Compile Include="DZTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DZTD.Designer.cs">
+      <DependentUpon>DZTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileChoose.Designer.cs">
+      <DependentUpon>FileChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManage.Designer.cs">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\DZFC\ZXFCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\DZFC\ZXFCForm.Designer.cs">
+      <DependentUpon>ZXFCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\EstateHJ\EstateHJForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\EstateHJ\EstateHJForm.Designer.cs">
+      <DependentUpon>EstateHJForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\IMGConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\IMGConvertForm.Designer.cs">
+      <DependentUpon>IMGConvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\IMGConvertFormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\IMGConvertFormEx.Designer.cs">
+      <DependentUpon>IMGConvertFormEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\ShowDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\ShowDialogForm.Designer.cs">
+      <DependentUpon>ShowDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\SuoYQConvert\SuoYQConConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\SuoYQConvert\SuoYQConConfigForm.Designer.cs">
+      <DependentUpon>SuoYQConConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\SuoYQConvert\SuoYQConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\SuoYQConvert\SuoYQConvertForm.Designer.cs">
+      <DependentUpon>SuoYQConvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\SYQConvert\SYQConConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\SYQConvert\SYQConConfigForm.Designer.cs">
+      <DependentUpon>SYQConConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\SYQConvert\SYQConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\SYQConvert\SYQConvertForm.Designer.cs">
+      <DependentUpon>SYQConvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLFJ_TAB_LOG.cs" />
+    <Compile Include="Model\DZFC\CFK.cs" />
+    <Compile Include="Model\DZFC\cxzxlog.cs" />
+    <Compile Include="Model\DZFC\filesin.cs" />
+    <Compile Include="Model\DZFC\lbuild.cs" />
+    <Compile Include="Model\DZFC\lextrab.cs" />
+    <Compile Include="Model\DZFC\lland.cs" />
+    <Compile Include="Model\DZFC\lowner.cs" />
+    <Compile Include="Model\DZFC\lperson.cs" />
+    <Compile Include="Model\DZFC\lroom.cs" />
+    <Compile Include="Model\DZFC\lunit.cs" />
+    <Compile Include="Model\DZFC\l产权抵押表.cs" />
+    <Compile Include="Model\DZFC\zbuild.cs" />
+    <Compile Include="Model\DZFC\zextrab.cs" />
+    <Compile Include="Model\DZFC\zland.cs" />
+    <Compile Include="Model\DZFC\zowner.cs" />
+    <Compile Include="Model\DZFC\zperson.cs" />
+    <Compile Include="Model\DZFC\zroom.cs" />
+    <Compile Include="Model\DZFC\zunit.cs" />
+    <Compile Include="Model\DZFC\zxlog.cs" />
+    <Compile Include="Model\DZFC\z产权抵押关系表.cs" />
+    <Compile Include="Model\DZFC\z产权抵押表.cs" />
+    <Compile Include="Model\DZFC\z产权注销关系表.cs" />
+    <Compile Include="Model\DZFC\z产权注销表.cs" />
+    <Compile Include="Model\DZFC\z查封信息表.cs" />
+    <Compile Include="Model\EstateHJ\MDB\C.cs" />
+    <Compile Include="Model\EstateHJ\MDB\CFDJ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\DYAQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\DYIQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\FDCQ1.cs" />
+    <Compile Include="Model\EstateHJ\MDB\FDCQ2.cs" />
+    <Compile Include="Model\EstateHJ\MDB\FDCQ3.cs" />
+    <Compile Include="Model\EstateHJ\MDB\FDCQXM.cs" />
+    <Compile Include="Model\EstateHJ\MDB\FZ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\GD.cs" />
+    <Compile Include="Model\EstateHJ\MDB\GJZWSYQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\H.cs" />
+    <Compile Include="Model\EstateHJ\MDB\HJLOG.cs" />
+    <Compile Include="Model\EstateHJ\MDB\HYSYQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\JSYDSYQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\LJZ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\LQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\NYDSYQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\QLR.cs" />
+    <Compile Include="Model\EstateHJ\MDB\QTXGQL.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SF.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SH.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SJ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SLSQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SQR.cs" />
+    <Compile Include="Model\EstateHJ\MDB\SZ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\TDSYQ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\YGDJ.cs" />
+    <Compile Include="Model\EstateHJ\MDB\YYDJ.cs" />
+    <Compile Include="Model\Estate\APPROVALFORM.cs" />
+    <Compile Include="Model\Estate\ARCHIVEITEM.cs" />
+    <Compile Include="Model\Estate\BOUNDARYMARK.cs" />
+    <Compile Include="Model\Estate\BOUNDARYSIGN.cs" />
+    <Compile Include="Model\Estate\BUILDING.cs" />
+    <Compile Include="Model\Estate\BUSDICTCODE.cs" />
+    <Compile Include="Model\Estate\CERTIFICATE.cs" />
+    <Compile Include="Model\Estate\DISSENTINFO.cs" />
+    <Compile Include="Model\Estate\EASEMENTINFO.cs" />
+    <Compile Include="Model\Estate\FARMCONUSEINFO.cs" />
+    <Compile Include="Model\Estate\FEEDETAIL.cs" />
+    <Compile Include="Model\Estate\FORESTINFO.cs" />
+    <Compile Include="Model\Estate\GRANTCARD.cs" />
+    <Compile Include="Model\Estate\HOUSEAPARTMENTINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEBUILDINGINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEFLOOR.cs" />
+    <Compile Include="Model\Estate\HOUSEPRJBLDINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEROOM.cs" />
+    <Compile Include="Model\Estate\LANDBLOCK.cs" />
+    <Compile Include="Model\Estate\LANDOWNERINFO.cs" />
+    <Compile Include="Model\Estate\LANDSURVERY.cs" />
+    <Compile Include="Model\Estate\LANDUSEINFO.cs" />
+    <Compile Include="Model\Estate\OTHERRIGHTINFO.cs" />
+    <Compile Include="Model\Estate\OWNANDCASE.cs" />
+    <Compile Include="Model\Estate\OWNANDLANDSUR.cs" />
+    <Compile Include="Model\Estate\OWNERS.cs" />
+    <Compile Include="Model\Estate\PLEDGEINFO.cs" />
+    <Compile Include="Model\Estate\PREREGINFO.cs" />
+    <Compile Include="Model\Estate\PUBLICBUINDINGINFO.cs" />
+    <Compile Include="Model\Estate\REALESTATEBOOK.cs" />
+    <Compile Include="Model\Estate\REALESTATECARD.cs" />
+    <Compile Include="Model\Estate\REALESTATEPROOF.cs" />
+    <Compile Include="Model\Estate\REALESTATERIGHT.cs" />
+    <Compile Include="Model\Estate\REALESTATEUNIT.cs" />
+    <Compile Include="Model\Estate\RECANDAPPFORM.cs" />
+    <Compile Include="Model\Estate\RECDATA.cs" />
+    <Compile Include="Model\Estate\RECFEEFORM.cs" />
+    <Compile Include="Model\Estate\REGBOOKLIST.cs" />
+    <Compile Include="Model\Estate\REGIONCODE.cs" />
+    <Compile Include="Model\Estate\REUANDCASE.cs" />
+    <Compile Include="Model\Estate\SEALUPINFO.cs" />
+    <Compile Include="Model\Estate\SEAUSEINFO.cs" />
+    <Compile Include="Model\Estate\STRUOWNERINFO.cs" />
+    <Compile Include="Model\Estate\SUBREGCODE.cs" />
+    <Compile Include="Model\Estate\SURAPPROVAL.cs" />
+    <Compile Include="Model\Pfuser\BUSIESS.cs" />
+    <Compile Include="Model\Pfuser\PROCESS.cs" />
+    <Compile Include="Model\Pfuser\PROCINSTANCE.cs" />
+    <Compile Include="Model\Pfuser\PROCPRESET.cs" />
+    <Compile Include="Model\Pfuser\TABLEMANAGE.cs" />
+    <Compile Include="Model\Pfuser\TASK.cs" />
+    <Compile Include="Model\SuoYQ\CLFJ_TAB.cs" />
+    <Compile Include="Model\SuoYQ\DJKXB_TAB.cs" />
+    <Compile Include="Model\SuoYQ\DJK_TAB.cs" />
+    <Compile Include="Model\SuoYQ\GHK_TAB.cs" />
+    <Compile Include="Model\SuoYQ\JZBS_TAB.cs" />
+    <Compile Include="Model\SuoYQ\LCBZ_TAB.cs" />
+    <Compile Include="Model\SuoYQ\LCJD_TAB.cs" />
+    <Compile Include="Model\SuoYQ\LCMB_TAB.cs" />
+    <Compile Include="Model\SuoYQ\LCSL_TAB.cs" />
+    <Compile Include="Model\SuoYQ\QSDC_TAB.cs" />
+    <Compile Include="Model\SuoYQ\QX_TAB.cs" />
+    <Compile Include="Model\SuoYQ\SJCL_TAB.cs" />
+    <Compile Include="Model\SuoYQ\SJD_TAB.cs" />
+    <Compile Include="Model\SuoYQ\SPB_TAB.cs" />
+    <Compile Include="Model\SuoYQ\SQS_TAB.cs" />
+    <Compile Include="Model\SuoYQ\TDZS_TAB.cs" />
+    <Compile Include="Model\SuoYQ\TOESTATELOG.cs" />
+    <Compile Include="Model\SuoYQ\XZQH_TAB.cs" />
+    <Compile Include="Model\SuoYQ\ZDQK_TAB.cs" />
+    <Compile Include="Model\SuoYQ\ZDZJ_TAB.cs" />
+    <Compile Include="Model\SuoYQ\ZSJS_TAB.cs" />
+    <Compile Include="MyTool\MyUtil.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DZTD.resx">
+      <DependentUpon>DZTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileChoose.resx">
+      <DependentUpon>FileChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManage.resx">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\DZFC\ZXFCForm.resx">
+      <DependentUpon>ZXFCForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\EstateHJ\EstateHJForm.resx">
+      <DependentUpon>EstateHJForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\IMGConvertForm.resx">
+      <DependentUpon>IMGConvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\IMGConvertFormEx.resx">
+      <DependentUpon>IMGConvertFormEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\ShowDialogForm.resx">
+      <DependentUpon>ShowDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\SuoYQConvert\SuoYQConConfigForm.resx">
+      <DependentUpon>SuoYQConConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\SuoYQConvert\SuoYQConvertForm.resx">
+      <DependentUpon>SuoYQConvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\SYQConvert\SYQConConfigForm.resx">
+      <DependentUpon>SYQConConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\SYQConvert\SYQConvertForm.resx">
+      <DependentUpon>SYQConvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\Test.exe.config" />
+    <None Include="bin\Debug\Test.vshost.exe.config" />
+    <None Include="bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Test.vshost.exe" />
+    <Content Include="Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="libs\SmartMap.DataClient.dll" />
+    <Content Include="obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <None Include="Resources\lock - 副本.png" />
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icon\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

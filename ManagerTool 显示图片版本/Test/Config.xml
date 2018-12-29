@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <!--集体土地所有权数据转换配置-->
+  <SuoYQConvert>
+    <!--一般配置-->
+    <CommonConfig>
+      <!--依次配置 省名称、地级市名称、县级市名称(区、县)-->
+      <SHENG Name="山东省">
+        <SHI Name="德州市" >
+          <XIAN Name="德城区"></XIAN>
+        </SHI>
+      </SHENG>     
+    </CommonConfig>
+    <!--连接配置-->
+    <ConnectionConfig>
+      <!--集体土地所有权数据库连接参数配置，依次为：服务器IP，数据库名称，用户名称，密码-->     
+      <SuoYQ HOST="localhost" SID="orcl" UserName="dzgt2" UserPassword="123"/>  
+      <!--不动产登记数据库(estate)连接参数配置，依次为：服务器IP，数据库名称，用户名称，密码-->
+      <Estate HOST="100" SID="orcl" UserName="estate" UserPassword="123"/>
+      <!--和‘-集体土地所有权数据库’对应的IMG库连接参数配置-->
+      <IMG HOST="localhost" SID="orcl" UserName="img" UserPassword="img"/>
+      <!--ftp连接方式1：当转换工具在不动产FTP服务器(不动产登记系统存放收件材料使用)上执行行，配置此路径。例如：D:\FTPRoot\case\recdata-->
+      <!--推荐使用此方式，生成图片效率高-->
+      <FtpPath>D:\FTPRoot\case\recdata</FtpPath>      
+      <!--ftp连接方式2：相对于ftp连接方式1，当转换工具在其它电脑上运行时，配置此路径-->
+      <!--若不是万不得已，不推荐使用此方式，效率没有ftp连接方式1高-->
+      <FtpConnectionConfig>
+        <!--ftp服务器IP地址-->
+        <IP>localhost</IP>
+        <!--ftp用户名-->
+        <UserId>ftpuser</UserId>
+        <!--ftp用户密码-->
+        <Password>Njtq1234</Password>
+      </FtpConnectionConfig>
+    </ConnectionConfig>
+  </SuoYQConvert>
+  <!--使用权数据转换配置-->
+  <SYQConvert>
+    <!--一般配置-->
+    <CommonConfig>
+      <!--依次配置 省名称、地级市名称、县级市名称(区、县)-->
+      <SHENG Name="山东省">
+        <SHI Name="德州市" >
+          <XIAN Name="德城区"></XIAN>
+        </SHI>
+      </SHENG>
+    </CommonConfig>
+    <!--连接配置-->
+    <ConnectionConfig>
+      <!--使用权数据库连接参数配置，依次为：服务器IP，数据库名称，用户名称，密码-->
+      <SYQ HOST="localhost" SID="orcl" UserName="dzgt2" UserPassword="123"/>
+      <!--不动产登记数据库(estate)连接参数配置，依次为：服务器IP，数据库名称，用户名称，密码-->
+      <Estate HOST="localhost" SID="orcl" UserName="estate" UserPassword="estate"/>
+      <!--和‘-集体土地所有权数据库’对应的IMG库连接参数配置-->
+      <IMG HOST="localhost" SID="orcl" UserName="img" UserPassword="img"/>
+      <!--ftp连接方式1：当转换工具在不动产FTP服务器(不动产登记系统存放收件材料使用)上执行行，配置此路径。例如：D:\FTPRoot\case\recdata-->
+      <!--推荐使用此方式，生成图片效率高-->
+      <FtpPath>D:\FTPRoot\case\recdata</FtpPath>
+      <!--ftp连接方式2：相对于ftp连接方式1，当转换工具在其它电脑上运行时，配置此路径-->
+      <!--若不是万不得已，不推荐使用此方式，效率没有ftp连接方式1高-->
+      <FtpConnectionConfig>
+        <!--ftp服务器IP地址-->
+        <IP>localhost</IP>
+        <!--ftp用户名-->
+        <UserId>ftpuser</UserId>
+        <!--ftp用户密码-->
+        <Password>Njtq1234</Password>
+      </FtpConnectionConfig>
+    </ConnectionConfig>
+  </SYQConvert>
+</Config>
+

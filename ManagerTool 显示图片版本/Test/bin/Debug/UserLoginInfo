@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Categories>
+  <Category>
+    <IP>127.0.0.1</IP>
+    <Sid>orcl</Sid>
+    <estateName>estate</estateName>
+    <estateWord>estate</estateWord>
+    <FtpIp>127.0.0.1</FtpIp>
+    <FtpName>Rina</FtpName>
+    <FtpWord>123</FtpWord>
+  </Category>
+</Categories>

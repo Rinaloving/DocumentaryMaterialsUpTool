@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10F654A1-A45E-4948-9E2E-7CCA7CC06277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>archive_128px_1206767_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>E:\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartMap.DataClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\SmartMap.DataClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonClass\SystemHandler.cs" />
+    <Compile Include="FileChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileChoose.Designer.cs">
+      <DependentUpon>FileChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManage.Designer.cs">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Estate\APPROVALFORM.cs" />
+    <Compile Include="Model\Estate\ARCHIVEITEM.cs" />
+    <Compile Include="Model\Estate\BOUNDARYMARK.cs" />
+    <Compile Include="Model\Estate\BOUNDARYSIGN.cs" />
+    <Compile Include="Model\Estate\BUILDING.cs" />
+    <Compile Include="Model\Estate\BUSDICTCODE.cs" />
+    <Compile Include="Model\Estate\CERTIFICATE.cs" />
+    <Compile Include="Model\Estate\DISSENTINFO.cs" />
+    <Compile Include="Model\Estate\EASEMENTINFO.cs" />
+    <Compile Include="Model\Estate\FARMCONUSEINFO.cs" />
+    <Compile Include="Model\Estate\FEEDETAIL.cs" />
+    <Compile Include="Model\Estate\FORESTINFO.cs" />
+    <Compile Include="Model\Estate\GRANTCARD.cs" />
+    <Compile Include="Model\Estate\HOUSEAPARTMENTINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEBUILDINGINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEFLOOR.cs" />
+    <Compile Include="Model\Estate\HOUSEPRJBLDINFO.cs" />
+    <Compile Include="Model\Estate\HOUSEROOM.cs" />
+    <Compile Include="Model\Estate\LANDBLOCK.cs" />
+    <Compile Include="Model\Estate\LANDOWNERINFO.cs" />
+    <Compile Include="Model\Estate\LANDSURVERY.cs" />
+    <Compile Include="Model\Estate\LANDUSEINFO.cs" />
+    <Compile Include="Model\Estate\OTHERRIGHTINFO.cs" />
+    <Compile Include="Model\Estate\OWNANDCASE.cs" />
+    <Compile Include="Model\Estate\OWNANDLANDSUR.cs" />
+    <Compile Include="Model\Estate\OWNERS.cs" />
+    <Compile Include="Model\Estate\PLEDGEINFO.cs" />
+    <Compile Include="Model\Estate\PREREGINFO.cs" />
+    <Compile Include="Model\Estate\PUBLICBUINDINGINFO.cs" />
+    <Compile Include="Model\Estate\REALESTATEBOOK.cs" />
+    <Compile Include="Model\Estate\REALESTATECARD.cs" />
+    <Compile Include="Model\Estate\REALESTATEPROOF.cs" />
+    <Compile Include="Model\Estate\REALESTATERIGHT.cs" />
+    <Compile Include="Model\Estate\REALESTATEUNIT.cs" />
+    <Compile Include="Model\Estate\RECANDAPPFORM.cs" />
+    <Compile Include="Model\Estate\RECDATA.cs" />
+    <Compile Include="Model\Estate\RECFEEFORM.cs" />
+    <Compile Include="Model\Estate\REGBOOKLIST.cs" />
+    <Compile Include="Model\Estate\REGIONCODE.cs" />
+    <Compile Include="Model\Estate\REUANDCASE.cs" />
+    <Compile Include="Model\Estate\SEALUPINFO.cs" />
+    <Compile Include="Model\Estate\SEAUSEINFO.cs" />
+    <Compile Include="Model\Estate\STRUOWNERINFO.cs" />
+    <Compile Include="Model\Estate\SUBREGCODE.cs" />
+    <Compile Include="Model\Estate\SURAPPROVAL.cs" />
+    <Compile Include="Model\Pfuser\BUSIESS.cs" />
+    <Compile Include="Model\Pfuser\PROCESS.cs" />
+    <Compile Include="Model\Pfuser\PROCINSTANCE.cs" />
+    <Compile Include="Model\Pfuser\PROCPRESET.cs" />
+    <Compile Include="Model\Pfuser\TABLEMANAGE.cs" />
+    <Compile Include="Model\Pfuser\TASK.cs" />
+    <Compile Include="MyTool\MyUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FileChoose.resx">
+      <DependentUpon>FileChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManage.resx">
+      <DependentUpon>FileManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\Test.exe.config" />
+    <None Include="bin\Debug\Test.vshost.exe.config" />
+    <None Include="bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="archive_128px_1206767_easyicon.net.ico" />
+    <Content Include="bin\Debug\Test.vshost.exe" />
+    <Content Include="Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="libs\CSkin.dll" />
+    <Content Include="libs\SmartMap.DataClient.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icon\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

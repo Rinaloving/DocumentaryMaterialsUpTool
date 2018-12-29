@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATANAMES>
+	<processname>不动产登记申请表</processname>
+	<processname>不动产登记审批表</processname>
+	<processname>不动产权调查资料</processname>
+	<processname>不动产权证书原件及复印件</processname>
+	<processname>查档记录表</processname>
+	<processname>法律、行政法规规定的其他必要材料</processname>
+	<processname>房产测绘报告</processname>
+	<processname>房屋买卖合同或其他证明不动产权发生转移德材料</processname>
+	<processname>购房发票</processname>
+	<processname>其他</processname>
+	<processname>商品房用地宗地分割转让登记证明</processname>
+	<processname>授权委托书及委托人身份证复印件</processname>
+	<processname>双方申请人身份证明</processname>
+	<processname>完税证明及税费发票复印件</processname>
+	<processname>宗地图</processname>
+	<processname>地籍档案</processname>
+</DATANAMES>
